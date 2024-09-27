@@ -1,0 +1,100 @@
+                  /* <!--Main Aesthetics--> */
+
+                  html, body {
+                    background-color: rgb(221, 232, 236);
+                    margin: 0;
+                    padding: 0;
+                    height: 100%;
+                  }
+                                    
+                  h1 {
+                    color: darkblue;
+                    font-family: "Lucida Handwriting", cursive;
+                    text-align: center;
+                  }
+                                    
+                  .subheading {
+                    text-align: center;
+                    font-family: "Lucida Handwriting", cursive;
+                  }
+                                    
+                  #instagram {
+                    border-radius: 10px;
+                    padding: 10px 20px;
+                    transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+                  }
+                                    
+                  #instagram:hover {
+                    background-color: rgb(217, 153, 233);
+                    transform: scale(1.05);
+                  }
+                                    
+                  #nextPage, #prevPage {
+                    border-radius: 10px;
+                    width: 100px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10px auto;
+                  }
+                                    
+                                    /* Image styling */
+                  #image-shown {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  }
+                                    
+                                    /* Grid container */
+                  .grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+                    grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+                    gap: 10px; /* Adjust spacing between grid items */
+                    padding: 20px;
+                    width: 100%;
+                     max-width: 1200px; /* Limit the grid's width */
+                    margin: 0 auto; /* Center the grid container */
+                  }
+                                    
+                                    /* Grid items */
+                  .div1 {
+                    grid-area: 1 / 2 / 4 / 4;
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+                    background-color: rgb(235, 135, 135); /* For visual purpose */
+                  }
+                                    
+                  .div2 { 
+                    grid-area: 2 / 4 / 3 / 5; 
+                    background-color: lightblue; /* Visual purpose */
+                  }
+                                    
+                  .div3 { 
+                    grid-area: 1 / 4 / 2 / 5; 
+                    background-color: lightgreen; /* Visual purpose */
+                  }
+                  
+                  .div4 { 
+                    grid-area: 3 / 4 / 4 / 5; 
+                     background-color: lightpink; /* Visual purpose */
+                  }
+                                    
+                                    /* Button container (centered buttons) */
+                  .button-container {
+                    grid-area: 4 / 2 / 5 / 4;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    background-color: lightcoral; /* Visual purpose */
+                  }
+                                    
+                  .div6 { 
+                    grid-area: 4 / 2 / 5 / 4; 
+                    background-color: lightyellow; /* Visual purpose */
+                  }
+                                    
