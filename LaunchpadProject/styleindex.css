@@ -1,67 +1,104 @@
-/* body {
-  background-color: rgb(129, 175, 190);
-} */
+                  /* <!--Main Aesthetics--> */
 
-
-html, body{
+html, body {
   background-color: rgb(221, 232, 236);
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-
+                  
 h1 {
   color: darkblue;
-  font-family: "Lucida Handwriting";
+  font-family: "Lucida Handwriting", cursive;
   text-align: center;
 }
-
-img{
-  width: 100%
-  height: auto;
-  object-fit: cover; 
+                  
+.subheading {
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+}
+                  
+#instagram {
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+}
+                  
+#instagram:hover {
+  background-color: rgb(217, 153, 233);
+  transform: scale(1.05);
+}
+                  
+#nextPage, #prevPage {
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+                  
+                  /* Image styling */
+#image-container{
+  width: 200px;
+  height: 300px;
+}
+#image-shown {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  display: block;
+}
+                  
+                  /* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+   max-width: 1200px;
+  margin: 0 auto;
+}
+                  
+                  /* Grid items */
+.div1 {
+  grid-area: 1 / 2 / 4 / 4;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: rgb(235, 135, 135); /* For visual purpose */
+}
+                  
+.div2 { 
+  grid-area: 2 / 4 / 3 / 5; 
+  background-color: lightblue; 
+}
+                  
+.div3 { 
+  grid-area: 1 / 4 / 2 / 5; 
+  background-color: lightgreen; 
 }
 
-
-.image-container {
+.div4 { 
+  grid-area: 3 / 4 / 4 / 5; 
+   background-color: lightpink; 
+}
+                  
+                  /* Button container (centered buttons) */
+.button-container {
+  grid-area: 4 / 2 / 5 / 4;
   display: flex;
   justify-content: center;
-  gap: 20px;
-}
-
-.image-container img {
-  width: 200px;
-  height: auto;
-}
-
-.subheading{
-  text-align: center;
-  font-family: "Lucida Handwriting";
-}
-#instagram:hover{
-  background-color: rgb(217, 153, 233);
-  transition-duration: 1s;
-  transform: scale(1.05);
-
-  }
-#instagram{
-  border-radius: 10px;
-
-  }
-
-#directBtn{
   align-items: center;
+  padding: 20px;
+  background-color: lightcoral; 
 }
-#nextPage{
-    border-radius: 10px;
-  }
-#prevPage{
-    border-radius: 10px;
-  }
-  
-                               /* Page 1 and Page 2 Aesthetics */
-.home{
-  width: 140px;
-  height: 70px;
+                  
+.div6 { 
+  grid-area: 4 / 2 / 5 / 4; 
+  background-color: lightyellow;
 }
-
-.page1, .page2{
-  background-color: white;
-}
+                  
