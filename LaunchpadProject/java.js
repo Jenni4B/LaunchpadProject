@@ -26,3 +26,14 @@ let images = [
 
 // Instagram redirect
 let instagramLink = "https://www.instagram.com/jeanbeanbc/"
+let githubLink = "https://github.com/Jenni4B"
+
+
+function instagram(){
+    window.location.href = instagramLink;
+
+}
+function github(){
+    window.location.href = githubLink;
+
+}

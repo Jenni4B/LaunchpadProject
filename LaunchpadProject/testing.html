@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,65 +6,71 @@
     <title>PulseCheck</title>
     <link rel="stylesheet" href="styleindex.css">
     <script src="java.js"></script>
+
 </head>
 <body>
     <header>
         <h1>PhotoFlip</h1>
     </header>
 
+
     <main>
         <h3 class="subheading">
+
             Welcome to my gallery!
+
         </h3>
         <br>
+        
+                        <!-- images and their associated links -->
 
-        <div class="grid-container">
-            <!-- Main Image Section -->
-            <div class="div1">
-                <a href="#" id="image-shown">
-                    <img src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" 
-                        alt="A pencil drawing of a girl with many braids" 
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </a>
-            </div>
+        <div class="image-container">
 
-            <!-- Placeholder for grid area 2 (can add content here later) -->
-            <div class="div2">
-                <!-- Optional content -->
-            </div>
+        <!-- Pictures -->
 
-            <!-- Like Button -->
-            <div class="div3">
-                <button id="likeButton">
-                    <img src="data:image/jpeg;base64,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"
-                     width="25" height="50" alt="Like icon">
-                </button>
-            </div>
+        <a id="image-shown">
+            <img src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
 
-            <!-- Placeholder for grid area 4 (can add content here later) -->
-            <div class="div4"></div>
+        </a>
 
-            <!-- Navigation Buttons (Previous and Next) -->
-            <div class="button-container">
-                <button id="prevPage" class="directBtn">Previous</button>
-                <button id="nextPage" class="directBtn">Next</button>
-            </div>
-
-            <!-- Placeholder for grid area 6 (can add content here later) -->
-            <div class="div6"></div>
         </div>
+        
+        
+        
     </main>
-
+    
+    <!-- Buttons -->
+    <section id="directBtn">
+        <button id="prevPage" class="directBtn">Previous</button>
+        <button id="nextPage" class="directBtn">Next</button>
+    </section>
+    
+    <br>
+    <section class="chat-container" id="chat-container"></section>
+    <!-- Top Row  --> 
+    
+    <!-- Center Row 2 -->
+    <section class="col-span">
+        <input type="text" name="inputText" id="inputText" class="inputText">        
+    </section>
+        
+        <section class="col-span">
+            <aside>
+                <button id="userMsg" class="userMsg">Submit</button>
+            </aside>
+        </section>
+        
     <footer>
-        <!-- Instagram Button -->
-        <button id="instagram">
-            <a href="https://www.instagram.com/jeanbeanbc/" target="_blank">
+        
+        <!--Social Media links-->
+        <button id="instagram"> 
+            
+            <!-- I plan to put more links, replace the text with the associated logos -->
+            <a href="https://www.instagram.com/jeanbeanbc/">
                 <p>Instagram</p>
             </a>
+            
         </button>
     </footer>
 </body>
 </html>
-
-
-

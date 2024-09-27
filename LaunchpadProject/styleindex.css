@@ -1,104 +1,162 @@
-                  /* <!--Main Aesthetics--> */
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 html, body {
-  background-color: rgb(221, 232, 236);
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgb(221, 232, 236);
+  color: #333;
 }
-                  
+
+/* Typography */
+h1, .subheading {
+  font-family: "Lucida Handwriting", cursive;
+  text-align: center;
+}
+
 h1 {
   color: darkblue;
-  font-family: "Lucida Handwriting", cursive;
-  text-align: center;
+  margin-bottom: 1rem;
 }
-                  
+
 .subheading {
-  text-align: center;
-  font-family: "Lucida Handwriting", cursive;
+  margin-top: 0;
 }
-                  
-#instagram {
-  border-radius: 10px;
-  padding: 10px 20px;
-  transition: transform 1s ease-in-out, background-color 1s ease-in-out;
-}
-                  
-#instagram:hover {
-  background-color: rgb(217, 153, 233);
-  transform: scale(1.05);
-}
-                  
-#nextPage, #prevPage {
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
+
+/* Layout */
+body {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 10px auto;
+  padding: 1rem;
 }
-                  
-                  /* Image styling */
-#image-container{
-  width: 200px;
-  height: 300px;
+
+/* Image container */
+.image-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0;
 }
+
 #image-shown {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
-                  
-                  /* Grid container */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-  padding: 20px;
-  width: 100%;
-   max-width: 1200px;
-  margin: 0 auto;
-}
-                  
-                  /* Grid items */
-.div1 {
-  grid-area: 1 / 2 / 4 / 4;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background-color: rgb(235, 135, 135); /* For visual purpose */
-}
-                  
-.div2 { 
-  grid-area: 2 / 4 / 3 / 5; 
-  background-color: lightblue; 
-}
-                  
-.div3 { 
-  grid-area: 1 / 4 / 2 / 5; 
-  background-color: lightgreen; 
-}
 
-.div4 { 
-  grid-area: 3 / 4 / 4 / 5; 
-   background-color: lightpink; 
-}
-                  
-                  /* Button container (centered buttons) */
-.button-container {
-  grid-area: 4 / 2 / 5 / 4;
+/* Navigation buttons */
+.navigation {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: lightcoral; 
+  gap: 1rem;
+  margin: 1rem 0;
 }
-                  
-.div6 { 
-  grid-area: 4 / 2 / 5 / 4; 
-  background-color: lightyellow;
+
+.nav-btn {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-                  
+
+.nav-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Chat container */
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-text {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#instagram:hover{
+  background-color: #c13584;
+  transform: scale(1.05);
+  transition: 1;
+}
+#github:hover{
+  background-color: #41277d;
+  transform: scale(1.05);
+  transition: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .input-container {
+      flex-direction: column;
+  }
+
+  .submit-btn {
+      width: 100%;
+  }
+}
