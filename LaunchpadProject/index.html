@@ -13,13 +13,13 @@
         <h1>PhotoFlip</h1>
     </header>
 
-    <!-- I have an idea to add different albums to upload different kinds of 
-     pictures and content in the future-->
 
     <main>
         <h3 class="subheading">
 
             Welcome to my gallery!
+
+            
         </h3>
         <br>
         
@@ -44,20 +44,47 @@
     <section id="directBtn">
         <button id="prevPage" class="directBtn">Previous</button>
         <button id="nextPage" class="directBtn">Next</button>
-    <!--Social Media links-->
+
+
+        
     </section>
+
+    <section class="other-buttons">
+        <button id="likebutton">Like button</button>
+        <button id="hideButton">Hide image</button>
+        <button id="dislikebutton">Dislike Button</button>
+      </section>
     
     <br>
+    <section class="chat-container" id="chat-container"></section>
+        <!-- Top Row  --> 
+        
+        <!-- Center Row 2 -->
+        <section class="col-span">
+            <input type="text" name="inputText" id="inputText" class="inputText">        
+        </section>
+        
+        <section class="col-span">
+            <aside>
+                <button id="userMsg" class="userMsg">Chat</button>
+            </aside>
+        </section>
 
+        
+    </section>
     <footer>
+        <!-- Takes you to Instagram -->
+        <button  onclick="instagram()" id="instagram" class="social-btn"> 
 
-        <button id="instagram"> 
-
-            <!-- I plan to put more links, replace the text with the associated logos -->
-            <a href="https://www.instagram.com/jeanbeanbc/">
                 <p>Instagram</p>
-            </a>
-            
+
+        </button>
+
+        <!-- And this button takes you to github -->
+        <button onclick="github()" id="github" class="social-btn"> 
+
+                <p>Github</p>
+
         </button>
     </footer>
 </body>

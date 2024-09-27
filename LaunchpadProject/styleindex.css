@@ -1,67 +1,162 @@
-/* body {
-  background-color: rgb(129, 175, 190);
-} */
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-
-html, body{
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
   background-color: rgb(221, 232, 236);
+  color: #333;
+}
+
+/* Typography */
+h1, .subheading {
+  font-family: "Lucida Handwriting", cursive;
+  text-align: center;
 }
 
 h1 {
   color: darkblue;
-  font-family: "Lucida Handwriting";
-  text-align: center;
+  margin-bottom: 1rem;
 }
 
-img{
-  width: 100%
-  height: auto;
-  object-fit: cover; 
+.subheading {
+  margin-top: 0;
 }
 
+/* Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Image container */
 .image-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0;
+}
+
+#image-shown {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation buttons */
+.navigation {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
-.image-container img {
-  width: 200px;
-  height: auto;
-}
-
-.subheading{
-  text-align: center;
-  font-family: "Lucida Handwriting";
-}
-#instagram:hover{
-  background-color: rgb(217, 153, 233);
-  transition-duration: 1s;
-  transform: scale(1.05);
-
-  }
-#instagram{
+.nav-btn {
   border-radius: 10px;
-
-  }
-
-#directBtn{
-  align-items: center;
-}
-#nextPage{
-    border-radius: 10px;
-  }
-#prevPage{
-    border-radius: 10px;
-  }
-  
-                               /* Page 1 and Page 2 Aesthetics */
-.home{
-  width: 140px;
-  height: 70px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.page1, .page2{
-  background-color: white;
+.nav-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Chat container */
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-text {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#instagram:hover{
+  background-color: #c13584;
+  transform: scale(1.05);
+  transition: 1;
+}
+#github:hover{
+  background-color: #41277d;
+  transform: scale(1.05);
+  transition: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .input-container {
+      flex-direction: column;
+  }
+
+  .submit-btn {
+      width: 100%;
+  }
 }
