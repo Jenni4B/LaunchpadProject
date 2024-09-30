@@ -24,38 +24,31 @@
         <br>
         
                         <!-- images and their associated links -->
-
-        <div class="image-container">
+        <div class="parent">
+            <div class="image-container">
 
         <!-- Pictures -->
+            </div>
+            <div class="image-container">
 
-        <a id="image-shown" href="page1.html">
-            <img src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
+                <a id="image-shown">
+                    <img src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
+                </a>
 
-        </a>
-
-        </div>
-        
-        
-        
-    </main>
+            </div>
+            <div class="button-container">
+              <button class="button" onclick="likedThePic()">Like button</button>
+              <button class="button" onclick="dislikedThePic()">Dislike Button</button>
+              <button class="button" onclick="hideThePic()">Hide image</button>
+            </div>
+        </div>    
     
-    <!-- Buttons -->
-    <section id="directBtn">
+    <!-- Directional Buttons -->
+    <section class="nav-btn">
         <button id="prevPage" class="directBtn">Previous</button>
         <button id="nextPage" class="directBtn">Next</button>
-
-
-        
     </section>
 
-    <section class="other-buttons">
-        <button id="likebutton">Like button</button>
-        <button id="hideButton">Hide image</button>
-        <button id="dislikebutton">Dislike Button</button>
-      </section>
-    
-    <br>
     <section class="chat-container" id="chat-container"></section>
         <!-- Top Row  --> 
         
@@ -63,15 +56,16 @@
         <section class="col-span">
             <input type="text" name="inputText" id="inputText" class="inputText">        
         </section>
-        
+<!--         
         <section class="col-span">
             <aside>
                 <button id="userMsg" class="userMsg">Chat</button>
             </aside>
-        </section>
+        </section> -->
 
         
     </section>
+</main>
     <footer>
         <!-- Takes you to Instagram -->
         <button  onclick="instagram()" id="instagram" class="social-btn"> 

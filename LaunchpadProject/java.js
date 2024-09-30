@@ -37,3 +37,13 @@ function github(){
     window.location.href = githubLink;
 
 }
+
+function likedThePic(){
+    
+}
+function dislikedThePic(){
+
+}
+function hideThePic(){
+
+}
