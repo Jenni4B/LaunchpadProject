@@ -10,7 +10,7 @@ let images = [
     {
         src: "https://yt3.ggpht.com/FNgjtFs5QkjvTCTvzgevDQUFVegYb5xk012P3IpV8_5UkXFpQ01-TgkyitHjXXQ2teUkfKv3Ec29LA=s288-c-fcrop64=1,09360000f6c9ffff-rw-nd-v1", 
         alt: "pen drawing of an eye"
-    }
+    },
     {
         src: "https://64.media.tumblr.com/19ad4293e84c72f0cdc14016dc4777a6/f3ca7286bf353358-d4/s540x810/330af57d67178d1af7e7df98fc339ab279349c1a.pnj", 
         alt: "a drawing of a fish"
