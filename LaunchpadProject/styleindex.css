@@ -1,8 +1,3 @@
-/* Reset and base styles
-*, *::before, *::after {
-  box-sizing: border-box;
-} */
-
 html, body {
   margin: 0;
   padding: 0;
@@ -46,9 +41,7 @@ main {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  }
-
-
+}
 
 /* Image container */
 .image-container {
@@ -57,11 +50,14 @@ main {
   margin: 0 auto;
 }
 
-.image {
+#image-shown {
   width: 100%;
   height: auto;
 }
-
+#image-shown:hover{
+  scale: 1.5x;
+  transition: 1s;
+}
 .button-container {
   position: absolute;
   top: 8px;
@@ -71,16 +67,13 @@ main {
   gap: 8px;
 }
 
-.button {
-  width: 96px;
-}
 
-/* #image-shown {
-  width: 50%;
+.img1 {
+  width: 250px;
   height: auto;
   object-fit: contain;
   display: block;
-} */
+}
 
 /* Navigation buttons */
 .navigation {
@@ -90,6 +83,9 @@ main {
   margin: 1rem 0;
 }
 
+.button {
+  width: 96px;
+}
 .nav-btn {
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -141,12 +137,14 @@ main {
 } */
 
 
-/* Footer */
+        /* Footer */
 footer {
   padding: 1rem;
   text-align: center;
 }
 
+
+              /* Social media buttons that go to github and instagram */
 .social-links {
   display: flex;
   justify-content: center;
@@ -171,15 +169,4 @@ footer {
   background-color: #41277d;
   transform: scale(1.05);
   transition: 1;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .input-container {
-      flex-direction: column;
-  }
-
-  .submit-btn {
-      width: 100%;
-  }
 }
