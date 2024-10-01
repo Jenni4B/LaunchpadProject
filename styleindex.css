@@ -1,27 +1,167 @@
-
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Lucida Handwriting", cursive;
+  text-align: center;
   background-color: lightblue;
+  color: #333;
 }
 
 h1 {
   color: darkblue;
+  margin-bottom: 1rem;
 }
 
-img{
+.subheading {
+  margin-top: 0;
+}
 
-  width: 100;
+/* Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.parent {
+  display: grid;
+  /* grid-template-columns: 0.2fr .5fr;
+  grid-template-rows: repeat(2, 1fr); */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#image-shown {
+  width: 100%;
   height: auto;
-
+}
+#image-shown:hover{
+  scale: 1.5x;
+  transition: 1s;
+}
+.button-container {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.image-container{
+
+.img1 {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation buttons */
+.navigation {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
-.image-container{
-  width: 200px;
-  height: auto;
+.button {
+  width: 96px;
+}
+.nav-btn {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.nav-btn:hover {
+  background-color: #ff1500;
+}
+
+/* Chat container */
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-text {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+        /* Footer */
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+
+              /* Social media buttons that go to github and instagram */
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#instagram:hover{
+  background-color: #c13584;
+  transform: scale(1.05);
+  transition: 1;
+}
+#github:hover{
+  background-color: #41277d;
+  transform: scale(1.05);
+  transition: 1;
 }
