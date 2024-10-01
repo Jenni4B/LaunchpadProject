@@ -34,9 +34,14 @@
                 </a>
 
                 <div class="button-container">
-                  <button class="button" onclick="likedThePic()">Like button</button>
-                  <button class="button" onclick="dislikedThePic()">Dislike Button</button>
-                  <button class="button" onclick="hideThePic()">Hide image</button>
+                    <!-- Added a like button with a like count -->
+
+                  <button id="likeButton" class="button">Like</button> <span class="count" id="likeCount">0</span>
+
+                  <button id="dislikeButton" class="button">Dislike</button> <span class="count" id="dislikeCount">0</span>
+
+                  <button id="hideButton" class="button" onclick="hideThePic()">Hide Image</button>
+
                 </div>
             </div>
         </div>    
