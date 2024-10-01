@@ -44,3 +44,4 @@ function hideThePic(){
 // hiding image function 
     // if hideButton is clicked, then image is removed from the seen
 }
+

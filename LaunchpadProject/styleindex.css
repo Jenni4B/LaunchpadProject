@@ -37,8 +37,8 @@ main {
 }
 .parent {
   display: grid;
-  grid-template-columns: 0.2fr .5fr;
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-columns: 0.2fr .5fr;
+  grid-template-rows: repeat(2, 1fr); */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -126,7 +126,7 @@ main {
   border-radius: 5px;
 }
 
-/* .submit-btn {
+.submit-btn {
   padding: 0.5rem 1rem;
   background-color: #28a745;
   color: white;
@@ -134,7 +134,7 @@ main {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-} */
+}
 
 
         /* Footer */
