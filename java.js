@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             likeCount++;
             likeButton.style.backgroundColor = '#4CAF50';
-            likeButton.textContent = 'Liked';
+
 
             // If dislike is active, reset it
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 disliked = false;
                 dislikeCount--;
                 dislikeButton.style.backgroundColor = '';
-                dislikeButton.textContent = 'Dislike';
+
                 dislikeDisplay.textContent = dislikeCount;
             }
         } else {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             likeCount--;
             likeButton.style.backgroundColor = '';
-            likeButton.textContent = 'Like';
+
         }
         liked = !liked; // Toggle like state
         likeDisplay.textContent = likeCount;
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             dislikeCount++;
             dislikeButton.style.backgroundColor = '#843024';
-            dislikeButton.textContent = 'Disliked';
+
 
             // If like is active, reset it
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 liked = false;
                 likeCount--;
                 likeButton.style.backgroundColor = '';
-                likeButton.textContent = 'Like';
+
                 likeDisplay.textContent = likeCount;
             }
         } else {
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             dislikeCount--;
             dislikeButton.style.backgroundColor = '';
-            dislikeButton.textContent = 'Dislike';
         }
         disliked = !disliked; // Toggle dislike state
 
