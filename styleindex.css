@@ -4,8 +4,8 @@ html, body {
   height: 100%;
   font-family: "Lucida Handwriting", cursive;
   text-align: center;
-  background-color: lightblue;
-  color: #333;
+  background-color: rgb(97, 175, 201);
+  color: #000000;
 }
 
 h1 {
@@ -19,10 +19,17 @@ h1 {
 
 /* Layout */
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f8da5;
+  height: 100vh;
 }
+
 main {
   flex: 1;
   display: flex;
@@ -41,18 +48,31 @@ main {
 /* Image container */
 .image-container {
   position: relative;
-  max-width: 400px;
-  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 #image-shown {
   width: 100%;
   height: auto;
 }
-#image-shown:hover{
-  scale: 1.5x;
-  transition: 1s;
+.image-container:hover img {
+  transform: scale(1.05);
 }
+
+
+
 .button-container {
   position: absolute;
   top: 8px;
@@ -65,10 +85,13 @@ main {
 
 .img1 {
   width: 250px;
-  height: auto;
+  height: 400px;
   object-fit: contain;
   display: block;
 }
+                                /* BUTTONS */
+
+
 
 /* Navigation buttons */
 .navigation {
@@ -77,6 +100,79 @@ main {
   gap: 1rem;
   margin: 1rem 0;
 }
+
+/* General image container styling */
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Make the overlay container invisible by default */
+
+#image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#image-overlay.active {
+  display: flex;
+}
+
+.enlarged {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+}
+
+.enlarged img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  object-fit: contain;
+  z-index: 1000;
+}
+
+/* Buttons inside the overlay */
+.button-container {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Show the overlay when hovering over the image */
+.image-container:hover .image-overlay {
+  opacity: 1; /* Show the buttons */
+}
+
+/* Image itself */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
 
 .button {
   width: 96px;
@@ -121,7 +217,7 @@ main {
   border-radius: 5px;
 }
 
-.submit-btn {
+.userMsg {
   padding: 0.5rem 1rem;
   background-color: #28a745;
   color: white;
@@ -131,6 +227,10 @@ main {
   transition: background-color 0.3s ease;
 }
 
+.userMsg:hover{
+  background-color: #1a642b;
+
+}
 
         /* Footer */
 footer {

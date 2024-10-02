@@ -17,11 +17,9 @@ let images = [
     }
 ];
 
-
 // Instagram and github redirect
 let instagramLink = "https://www.instagram.com/jeanbeanbc/"
 let githubLink = "https://github.com/Jenni4B"
-
 
 function instagram(){
     window.location.href = instagramLink;
@@ -33,27 +31,34 @@ function github(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
     // Initialize like and dislike counts and states
+    
     let likeCount = 0;
     let dislikeCount = 0;
     let liked = false;
     let disliked = false;
 
     // Get the buttons and display elements
+
     const likeButton = document.getElementById('likeButton');
     const likeDisplay = document.getElementById('likeCount');
     const dislikeButton = document.getElementById('dislikeButton');
     const dislikeDisplay = document.getElementById('dislikeCount');
 
     // Like button click event
+
     likeButton.addEventListener('click', function() {
         if (!liked) {
+
             // Add like count and change button state
+
             likeCount++;
             likeButton.style.backgroundColor = '#4CAF50';
             likeButton.textContent = 'Liked';
 
             // If dislike is active, reset it
+
             if (disliked) {
                 disliked = false;
                 dislikeCount--;
@@ -63,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else {
             // Decrement like count and reset button state
+
             likeCount--;
             likeButton.style.backgroundColor = '';
             likeButton.textContent = 'Like';
@@ -72,14 +78,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Dislike button click event
+
     dislikeButton.addEventListener('click', function() {
         if (!disliked) {
+
             // Increment dislike count and change button state
+
             dislikeCount++;
             dislikeButton.style.backgroundColor = '#843024';
             dislikeButton.textContent = 'Disliked';
 
             // If like is active, reset it
+
             if (liked) {
                 liked = false;
                 likeCount--;
@@ -88,12 +98,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 likeDisplay.textContent = likeCount;
             }
         } else {
+
             // Decrease dislike count and reset button state
+
             dislikeCount--;
             dislikeButton.style.backgroundColor = '';
             dislikeButton.textContent = 'Dislike';
         }
         disliked = !disliked; // Toggle dislike state
+
         dislikeDisplay.textContent = dislikeCount;
     });
 })
+
+function enlargeImage(container) {
+    const overlay = document.getElementById('image-overlay');
+    const enlargedImage = document.getElementById('enlarged-image');
+    
+    // Set the enlarged image source to the original image source
+    const img = container.querySelector('img');
+    enlargedImage.src = img.src;
+    enlargedImage.alt = img.alt;
+    
+    overlay.classList.add('active'); // Show the overlay
+}
+
+function closeOverlay() {
+    const overlay = document.getElementById('image-overlay');
+    overlay.classList.remove('active'); // Hide the overlay
+}

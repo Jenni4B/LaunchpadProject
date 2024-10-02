@@ -26,14 +26,14 @@
 
         <!-- Pictures -->
             </div>
-            
-            <div class="image-container">
+            <div id="overlay"></div>
+            <div class="image-container" onclick="enlargeImage(this)">
 
                 <a id="image-shown">
                     <img class="img1"src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
                 </a>
 
-                <div class="button-container">
+                <div class="button-container" class="image-overlay">
                     <!-- Added a like button with a like count -->
 
                   <button id="likeButton" class="button">Like</button> <span class="count" id="likeCount">0</span>
@@ -59,12 +59,12 @@
         <section class="col-span">
             <input type="text" name="inputText" id="inputText" class="inputText">        
         </section>
-<!--         
+        <br>
         <section class="col-span">
             <aside>
                 <button id="userMsg" class="userMsg">Chat</button>
             </aside>
-        </section> -->
+        </section>
 
         
     </section>
