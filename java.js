@@ -31,7 +31,7 @@ let instagramLink = "https://www.instagram.com/jeanbeanbc/"
 let githubLink = "https://github.com/Jenni4B"
 
 function instagram(){
-    window.open = (instagramLink, '_blank');
+    window.open(instagramLink, '_blank');
 
 }
 function github(){
