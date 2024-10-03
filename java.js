@@ -31,14 +31,17 @@ let instagramLink = "https://www.instagram.com/jeanbeanbc/"
 let githubLink = "https://github.com/Jenni4B"
 
 function instagram(){
-    window.location.href = instagramLink;
+    window.open = (instagramLink, '_blank');
 
 }
 function github(){
-    window.location.href = githubLink;
+    window.open(githubLink, '_blank');
 
 }
 
+
+
+// Like and dislike function
 document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize like and dislike counts and states
@@ -119,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 })
 
+
+
+// Enlarges image on click
 function enlargeImage(container) {
     const overlay = document.getElementById('image-overlay');
     const enlargedImage = document.getElementById('enlarged-image');
@@ -130,7 +136,7 @@ function enlargeImage(container) {
     
     overlay.classList.add('active'); // Show the overlay
 }
-
+// Resets image size when clicked off
 function closeOverlay() {
     const overlay = document.getElementById('image-overlay');
     overlay.classList.remove('active'); // Hide the overlay
