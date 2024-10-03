@@ -21,7 +21,7 @@ let imageIndex = 0
 
 function nextImage(imageIndex){
 
-    
+
 
 }
 
@@ -30,13 +30,12 @@ function nextImage(imageIndex){
 let instagramLink = "https://www.instagram.com/jeanbeanbc/"
 let githubLink = "https://github.com/Jenni4B"
 
-function instagram(){
-    window.location.href = instagramLink;
-
+function instagram() {
+    window.open(instagramLink, '_blank');
 }
-function github(){
-    window.location.href = githubLink;
 
+function github() {
+    window.open(githubLink, '_blank');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
