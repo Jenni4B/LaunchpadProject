@@ -17,13 +17,15 @@ let images = [
     }
 ];
 
-let imageIndex = 0
-
-function nextImage(imageIndex){
 
 
+document.addEventListener('click', function(imageIndex){
 
-}
+    let imageIndex = 0
+    
+
+
+})
 
 
 // Instagram and github redirect
