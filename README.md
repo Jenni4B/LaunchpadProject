@@ -5,3 +5,4 @@ To go to the project, you can clone this repo using: https://github.com/Jenni4B/
 or hit this link: https://jenni4b.github.io/LaunchpadProject/
 
 Update October 1st: The like and dislike button can be toggled! Enjoy!
+Update October 3rd: Click on the image to make it bigger!
