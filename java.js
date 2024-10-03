@@ -17,27 +17,26 @@ let images = [
     }
 ];
 
+let imageIndex = 0
 
+function nextImage(imageIndex){
 
-document.addEventListener('click', function(imageIndex){
-
-    let imageIndex = 0
     
 
-
-})
+}
 
 
 // Instagram and github redirect
 let instagramLink = "https://www.instagram.com/jeanbeanbc/"
 let githubLink = "https://github.com/Jenni4B"
 
-function instagram() {
-    window.open(instagramLink, '_blank');
-}
+function instagram(){
+    window.location.href = instagramLink;
 
-function github() {
-    window.open(githubLink, '_blank');
+}
+function github(){
+    window.location.href = githubLink;
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
