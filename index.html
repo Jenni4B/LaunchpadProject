@@ -5,59 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PulseCheck</title>
     <link rel="stylesheet" href="styleindex.css">
-    <script src="java.js"></script>
+    <script defer src="java.js"></script>
 </head>
 <body>
     <header>
         <h1>PhotoFlip</h1>
     </header>
 
-	<!-- I have an idea to add different albums to upload different kinds of 
-	 pictures and content in the future-->
     <main>
-        <h3 class="subheading">
-          Welcome to my gallery!
-        </h3>
+        <h3 class="subheading">Welcome to my gallery!</h3>
         <br>
-        
-                        <!-- images and their associated links -->
+
+        <!-- Image gallery with enlarge functionality -->
         <div class="parent">
-            <div class="image-container">
-
-        <!-- Pictures -->
-            </div>
-            <div id="overlay"></div>
             <div class="image-container" onclick="enlargeImage(this)">
-
                 <a id="image-shown">
-                    <img class="img1"src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
+                    <img class="img1" src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
                 </a>
 
-                <div class="button-container" class="image-overlay">
-                    <!-- Added a like button with a like count -->
+                <div class="button-container image-overlay">
+                    <!-- Like, dislike, and hide buttons -->
+                    <button id="likeButton" class="button">❤️</button> 
+                    <span class="count" id="likeCount">0</span>
 
-                  <button id="likeButton" class="button">❤️</button> <span class="count" id="likeCount">0</span>
+                    <button id="dislikeButton" class="button">👎🏼</button> 
+                    <span class="count" id="dislikeCount">0</span>
 
-                  <button id="dislikeButton" class="button">👎🏼</button> <span class="count" id="dislikeCount">0</span>
-
-                  <button id="hideButton" class="button" onclick="hideThePic()">👁️</button>
-
+                    <button id="hideButton" class="button" onclick="hideThePic()">👁️</button>
                 </div>
             </div>
-        </div>    
-    
-    <!-- Directional Buttons -->
-    <section class="nav-btn">
-        <button id="prevPage" class="directBtn">Previous</button>
-        <button id="nextPage" class="directBtn">Next</button>
-    </section>
+        </div>  
 
-    <section class="chat-container" id="chat-container"></section>
-        <!-- Top Row  --> 
-        
-        <!-- Center Row 2 -->
+        <!-- Overlay for enlarged image -->
+        <div id="image-overlay" class="image-overlay" onclick="closeOverlay()">
+            <img id="enlarged-image" src="" alt="">
+        </div>
+
+        <!-- Directional buttons -->
+        <section class="nav-btn">
+            <button id="prevPage" class="directBtn">Previous</button>
+            <button id="nextPage" class="directBtn">Next</button>
+        </section>
+
+        <!-- Chat container -->
+        <section class="chat-container" id="chat-container"></section>
+
+        <!-- Input and chat button -->
         <section class="col-span">
-            <input type="text" name="inputText" id="inputText" class="inputText">        
+            <input type="text" name="inputText" id="inputText" class="inputText">
         </section>
         <br>
         <section class="col-span">
@@ -66,23 +61,16 @@
             </aside>
         </section>
 
-        
-    </section>
-</main>
+    </main>
 
+    <!-- Footer with social media buttons -->
     <footer>
-        <!-- Takes you to Instagram -->
-        <button  onclick="instagram()" id="instagram" class="social-btn"> 
-
-                <p>Instagram</p>
-
+        <button onclick="instagram()" id="instagram" class="social-btn">
+            <p>Instagram</p>
         </button>
 
-        <!-- And this button takes you to github -->
-        <button onclick="github()" id="github" class="social-btn"> 
-
-                <p>Github</p>
-
+        <button onclick="github()" id="github" class="social-btn">
+            <p>Github</p>
         </button>
     </footer>
 </body>

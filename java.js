@@ -17,6 +17,15 @@ let images = [
     }
 ];
 
+let imageIndex = 0
+
+function nextImage(imageIndex){
+
+    
+
+}
+
+
 // Instagram and github redirect
 let instagramLink = "https://www.instagram.com/jeanbeanbc/"
 let githubLink = "https://github.com/Jenni4B"
