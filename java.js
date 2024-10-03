@@ -36,12 +36,12 @@ function updateImage() {
 }
 
 function prevImage() {
-  currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
   updateImage();
 }
 
 function nextImage() {
-  currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+  currentIndex = (currentIndex + 1 ) % images.length;
   updateImage();
 }
 
@@ -51,11 +51,10 @@ let githubLink = "https://github.com/Jenni4B"
 
 function instagram(){
     window.open(instagramLink, '_blank');
-
 }
+
 function github(){
     window.open(githubLink, '_blank');
-
 }
 
 
@@ -165,6 +164,39 @@ function shareImage() {
 }
 
 // hide button things 
+function hideThePic() {
+    const image = document.querySelector('.img1');
+    const hideButton = document.getElementById('hideButton');
+    
+    if (image.style.opacity === '0') {
+        image.style.opacity = '1';
+        hideButton.textContent = '👁️';
+        hideButton.setAttribute('aria-label', 'Hide image');
+
+        if (messageElement) {
+            messageElement.remove();
+        }
+
+
+    } else {
+        image.style.opacity = '0';
+        hideButton.textContent = '👁️‍🗨️'; // appears when the image is hidden and dips when the image is visible
+        hideButton.setAttribute('aria-label', 'Show image');
+
+        if (!messageElement) {
+
+            // Creates a div element that contains a message when the image is hidden
+            messageElement = document.createElement('div');
+            messageElement.id = 'hiddenMessage';
+            messageElement.textContent = 'Image is hidden';
+            messageElement.style.fontSize = '20px';
+            messageElement.style.color = '#000000'; 
+            parentContainer.appendChild(messageElement);
+
+    }
+}}
+
+
 
 // Enlarges image on click
 function enlargeImage(container) {
@@ -178,6 +210,10 @@ function enlargeImage(container) {
     
     overlay.classList.add('active'); // Show the overlay
 }
+
+// Main issue that when I click on other elements such as the like, dislike, share, 
+// and hide buttons, it still enlarges the picture 👀
+
 // Resets image size when clicked off
 function closeOverlay() {
     const overlay = document.getElementById('image-overlay');

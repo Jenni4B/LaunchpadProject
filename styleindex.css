@@ -165,8 +165,11 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.nav-btn:hover {
-  background-color: #89c2d3;
+#prevImage:hover{
+  background-color: #561c1c;
+}
+#nextImage:hover{
+  background-color: #207120;
 }
 
 /* Chat container */
