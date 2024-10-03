@@ -27,7 +27,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2f8da5;
+  background-color: #6faab8;
   height: 100vh;
 }
 
@@ -145,7 +145,7 @@ main {
 .button-container {
   background: none;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 16px;
   padding: 10px;

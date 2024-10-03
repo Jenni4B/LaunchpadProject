@@ -1,4 +1,4 @@
-let images = [
+const images = [
     {
         src: "https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1",
         alt: "a pencil drawing of a girl with many braids"
@@ -17,14 +17,33 @@ let images = [
     }
 ];
 
-let imageIndex = 0
+const mainImage = document.getElementById('image-shown');
 
-function nextImage(imageIndex){
+function updateImage() {
+  mainImage.classList.remove('show'); // Trigger fade-out transition
 
-    
+  // Wait for transition to complete before updating
+  setTimeout(() => {
+    mainImage.src = images[currentIndex].src;
+    mainImage.alt = images[currentIndex].alt;
 
+    // Update the caption with the alt text
+    const caption = document.getElementById('caption');
+    caption.textContent = images[currentIndex].alt;
+
+    mainImage.classList.add('show'); 
+  }, 500); 
 }
 
+function prevImage() {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+  updateImage();
+}
+
+function nextImage() {
+  currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+  updateImage();
+}
 
 // Instagram and github redirect
 let instagramLink = "https://www.instagram.com/jeanbeanbc/"
@@ -119,10 +138,33 @@ document.addEventListener('DOMContentLoaded', function() {
         disliked = !disliked; // Toggle dislike state
 
         dislikeDisplay.textContent = dislikeCount;
+        
     });
 })
 
+// share function
 
+function shareImage() {
+    const image = document.querySelector('.img1');
+    if (navigator.share) {
+        fetch(image.src)
+            .then(response => response.blob())
+            .then(blob => {
+                const file = new File([blob], 'image.jpg', { type: blob.type });
+                navigator.share({
+                    files: [file],
+                    title: 'Check out this image!',
+                    text: 'I found this awesome image and wanted to share it with you.'
+                })
+                .then(() => console.log('Image shared successfully'))
+                .catch((error) => console.error('Error sharing the image:', error));
+            });
+    } else {
+        alert('Web Share API is not supported in your browser. You can manually share the image URL.');
+    }
+}
+
+// hide button things 
 
 // Enlarges image on click
 function enlargeImage(container) {
