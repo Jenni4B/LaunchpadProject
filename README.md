@@ -7,3 +7,4 @@ or hit this link: https://jenni4b.github.io/LaunchpadProject/
 Update October 1st: The like and dislike button can be toggled! Enjoy!
 
 Update October 3rd: Click on the image to make it bigger!
+                    Share or hide the image!
