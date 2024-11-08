@@ -1,6 +1,7 @@
 console.log('Script loaded');
 
 // Function to create the feedback page popup
+
 function feedbackPage() {
     console.log('feedbackPage function called');
 
@@ -47,7 +48,7 @@ function feedbackPage() {
     feedbackLabel.textContent = 'Feedback:';
 
     const feedbackTextarea = document.createElement('textarea');
-    feedbackTextarea.id = 'feedback';
+    feedbackTextarea.id = 'feedbackArea';
     feedbackTextarea.placeholder = 'Your Feedback';
 
     feedbackField.append(feedbackLabel, feedbackTextarea);
@@ -83,7 +84,7 @@ function feedbackPage() {
     submitFeedbackButton.addEventListener('click', () => {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const feedback = document.getElementById('feedback').value;
+        const feedback = document.getElementById('feedbackArea').value;
     
         console.log('Name:', name);
         console.log('Email:', email);
@@ -94,7 +95,7 @@ function feedbackPage() {
             alert("All fields are required.");
             return;
         }
-        
+        else{
         // Proceed with form submission
         localStorage.setItem('name', name);
         localStorage.setItem('email', email);
@@ -106,7 +107,8 @@ function feedbackPage() {
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
         document.getElementById('feedback').value = '';
-    });
+    
+    }});
     
 }
 
