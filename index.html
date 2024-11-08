@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PulseCheck</title>
     <link rel="stylesheet" href="styleindex.css">
-    <script defer src="java.js"></script>
+    <script defer src="JavaScriptFiles/feedbackForm.js"></script>
+    <script defer src="JavaScriptFiles/mainpage.js"></script>
 </head>
 <body>
-    <header>
-        <h1>PhotoFlip</h1>
-    </header>
+    <nav>
+        <header>
+            <h1>PhotoFlip</h1>
+        </header>
+        <button id="feedback">Feedback and Requests</button>
+    </nav>
 
     <main>
         <h3 class="subheading">Welcome to my gallery!</h3>
@@ -23,7 +27,7 @@
                     <img class="img1" src="https://yt3.ggpht.com/XfzZdtU7TYmUk8tLIeduOL-zWlNWvT3PSyh0HtrBggxo0CrFqnySrMKBEp8eQlZhCABEQn3nacvMtD8=s640-c-fcrop64=1,000000d0ffffff2f-rw-nd-v1" alt="a pencil drawing of a girl with many braids">
                 </a>
 
-                <div class="button-container image-overlay">
+                <div class="button-container">
                     <!-- Like, dislike, and hide buttons -->
                     <button id="likeButton" class="button">❤️</button> 
                     <span class="count" id="likeCount">0</span>
@@ -33,7 +37,6 @@
 
                     <button id="hideButton" class="button" onclick="hideThePic()">👁️</button>
                     <button id="shareButton" class="button" onclick="shareImage()">💌</button>
-
                 </div>
             </div>
         </div>  
@@ -44,25 +47,10 @@
         </div>
 
         <!-- Directional buttons -->
-        <section class="nav-btn">
-            <button id="prevImage" class="directBtn" onclick="prevImage()">⬅️</button>
-            <button id="nextImage" class="directBtn"  onclick="nextImage()">➡️</button>
+        <section class="navigation">
+            <button id="prevImage" class="nav-btn" onclick="prevImage()">⬅️</button>
+            <button id="nextImage" class="nav-btn" onclick="nextImage()">➡️</button>
         </section>
-
-        <!-- Chat container -->
-        <section class="chat-container" id="chat-container"></section>
-
-        <!-- Input and chat button -->
-        <section class="col-span">
-            <input type="text" name="inputText" id="inputText" class="inputText">
-        </section>
-        <br>
-        <section class="col-span">
-            <aside>
-                <button id="userMsg" class="userMsg">Submit</button>
-            </aside>
-        </section>
-
     </main>
 
     <!-- Footer with social media buttons -->
